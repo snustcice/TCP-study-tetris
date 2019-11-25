@@ -11,8 +11,9 @@ public:
 	{
 		//블록이 이동하는 부분
 	}
+
 private:
-	const char I, J, L, O, S, T, Z;
+	const char I, J, L	, O, S, T, Z;
 
 };
 
