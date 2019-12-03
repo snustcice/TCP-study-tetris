@@ -1,21 +1,10 @@
 #include "tetris.h"
+using namespace std;
 
-class Tetrominoe
+void SetGame(void)
 {
-public:
-	void rotate()
-	{
-		//블록이 회전하는 부분
-	}
-	void move()
-	{
-		//블록이 이동하는 부분
-	}
-
-private:
-	const char I, J, L	, O, S, T, Z;
-
-};
+	system("mode con cols=50 lines=30 | title Tetris");
+}
 
 void MoveCursor(int x, int y)
 {
@@ -24,4 +13,14 @@ void MoveCursor(int x, int y)
 	pos.X = x;
 	pos.Y = y;
 	SetConsoleCursorPosition(consoleHandle, pos);
+}
+
+void DrawMenu(void)
+{
+	MoveCursor(18 - 2, 12);
+	cout << "> 게임 시작";
+	MoveCursor(18 - 2, 16);
+	cout << "> 게임 정보";
+	MoveCursor(18 - 2, 20);
+	cout << "> 게임 종료";
 }
