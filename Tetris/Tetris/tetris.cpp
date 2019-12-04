@@ -3,7 +3,7 @@ using namespace std;
 
 void SetGame(void)
 {
-	system("mode con cols=50 lines=30 | title Tetris");
+	system("mode con cols=60 lines=30 | title Tetris");
 }
 
 void MoveCursor(int x, int y)
@@ -17,10 +17,26 @@ void MoveCursor(int x, int y)
 
 void DrawMenu(void)
 {
-	MoveCursor(18 - 2, 12);
+	cout << 
+		"     _______  ______  _______  _____   _____   _____ \n"
+		"    |__   __||  ____||__   __||  __ \\ |_   _| / ____|\n"
+		"       | |   | |__      | |   | |__) |  | |  | (___  \n"
+		"       | |   |  __|     | |   |  _  /   | |   \\___ \\ \n"
+		"       | |   | |____    | |   | | \\ \\  _| |_  ____) |\n"
+		"       |_|   |______|   |_|   |_|  \\_\\|_____||_____/\n";
+	MoveCursor(50, 8);
+	cout << GAME_VERSION << endl;
+	MoveCursor(25 - 2, 12);
 	cout << "> 게임 시작";
-	MoveCursor(18 - 2, 16);
+	MoveCursor(25 - 2, 14);
 	cout << "> 게임 정보";
-	MoveCursor(18 - 2, 20);
+	MoveCursor(25 - 2, 16);
 	cout << "> 게임 종료";
+
+	if()
+}
+
+int ReadKeyboard(void)
+{
+	char temp = getchar();
 }
