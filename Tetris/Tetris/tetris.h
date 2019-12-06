@@ -25,6 +25,6 @@ void ShowInfo(void);
 int ReadKey(void);
 void CreateTet(void);	//Create Tetriminos(blocks)
 
-const char GAME_VERSION[20] = "test version";
+const char GAME_VERSION[20] = "test version";	//Version
 
 #endif
