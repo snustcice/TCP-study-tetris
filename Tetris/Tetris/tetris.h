@@ -1,20 +1,30 @@
 #ifndef TETRIS
 #define TETRIS
-#define UP 0
-#define DOWN 1
-#define LEFT 2
-#define RIGHT 3
+#define KEY_UP 72
+#define KEY_DOWN 80
+#define KEY_LEFT 75
+#define KEY_RIGHT 77	//define ASCII code for arrow key
+#define SUBMIT 13	//define ASCII code for enter key(\n)
+#define ESC 27
+#define GAME_START 0
+#define GAME_INFO 1
+#define GAME_QUIT 2
 
 #include <iostream>
 #include <Windows.h>
-#include <stdio.h>
+#include <conio.h>	//for using _getch()
 #include <cstdlib>
 #include <ctime>	//cstdlib, ctime -- for using srand()
 
 void SetGame(void);
+void ShowTitle(void);
 void MoveCursor(int x, int y);
-void DrawMenu(void);
-int ReadKeyboard(void);
+void ShowMenu(void);
+int SelectMenu(void);
+void ShowInfo(void);
+int ReadKey(void);
+void CreateTet(void);	//Create Tetriminos(blocks)
 
-const char GAME_VERSION[20] = "v.1.0";
+const char GAME_VERSION[20] = "test version";
+
 #endif
