@@ -6,7 +6,7 @@ int main(void)
 	while (1)
 	{
 		DrawMenu();
-		if()
+		
 		system("cls");
 	}
 	system("pause");

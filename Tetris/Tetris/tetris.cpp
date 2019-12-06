@@ -3,6 +3,7 @@ using namespace std;
 
 void SetGame(void)
 {
+	srand((unsigned int)time(NULL));
 	system("mode con cols=60 lines=30 | title Tetris");
 }
 
@@ -32,8 +33,6 @@ void DrawMenu(void)
 	cout << "> 게임 정보";
 	MoveCursor(25 - 2, 16);
 	cout << "> 게임 종료";
-
-	if()
 }
 
 int ReadKeyboard(void)

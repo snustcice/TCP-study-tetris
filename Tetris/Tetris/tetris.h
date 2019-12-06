@@ -8,6 +8,8 @@
 #include <iostream>
 #include <Windows.h>
 #include <stdio.h>
+#include <cstdlib>
+#include <ctime>	//cstdlib, ctime -- for using srand()
 
 void SetGame(void);
 void MoveCursor(int x, int y);
