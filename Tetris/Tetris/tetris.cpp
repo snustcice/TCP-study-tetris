@@ -1,7 +1,7 @@
 #include "tetris.h"
 using namespace std;
 
-void SetGame(void)
+void Initialize(void)
 {
 	srand((unsigned int)time(NULL));
 	system("mode con cols=60 lines=30 | title Tetris");
@@ -128,6 +128,10 @@ void ShowInfo(void)
 	}
 }
 
+void SetGame(void)
+{
+
+}
 void CreateTet(void)
 {
 	//Convert binary to hexadecimal(0, 1) --> specific hexadecimal value, easier to print
@@ -141,8 +145,10 @@ void CreateTet(void)
 		{ 0x88C0, 0xE800, 0xC440, 0x2E00 }, // 'L'
 		{ 0xCC00, 0xCC00, 0xCC00, 0xCC00 }  // 'O'
 	};
+
 	int tet_x = rand() % 7;
 	int tet_y = rand() % 4;
 
+	MoveCursor(10, 50);
 	cout << Tetrominos[tet_x][tet_y];
 }

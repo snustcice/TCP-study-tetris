@@ -4,7 +4,7 @@
 #define KEY_DOWN 80
 #define KEY_LEFT 75
 #define KEY_RIGHT 77	//define ASCII code for arrow key
-#define SUBMIT 13	//define ASCII code for enter key(\n)
+#define SUBMIT 13		//define ASCII code for enter key(\n)
 #define ESC 27
 #define GAME_START 0
 #define GAME_INFO 1
@@ -16,6 +16,7 @@
 #include <cstdlib>
 #include <ctime>	//cstdlib, ctime -- for using srand()
 
+void Initialize(void);
 void SetGame(void);
 void ShowTitle(void);
 void MoveCursor(int x, int y);

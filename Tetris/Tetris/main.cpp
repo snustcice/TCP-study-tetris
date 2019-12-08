@@ -2,7 +2,7 @@
 
 int main(void)
 {
-	SetGame();	//void SetGame(void) -- Semantic error(compile ok)
+	Initialize();	//void Init(void) -- Semantic error(compile ok)
 	while (1)
 	{
 		ShowTitle();
@@ -10,6 +10,7 @@ int main(void)
 		switch (SelectMenu())
 		{
 		case GAME_START:
+			CreateTet();
 			break;
 		case GAME_INFO:
 			ShowInfo();
